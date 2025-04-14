@@ -4,10 +4,12 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import CustomNavbar from './components/NavBar';
 
 function App() {
   return (
     <Router>
+      <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
