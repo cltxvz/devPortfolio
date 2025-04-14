@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import profilePic from '../components/Files/profile.jpg';
-import resumeFile from '../components/Files/resume.pdf'; // Optional
+import resumeFile from '../components/Files/resume.pdf';
 
 function Home() {
   return (
@@ -8,25 +8,12 @@ function Home() {
       {/* Hero Section */}
       <Container
         fluid
-        className="d-flex flex-column justify-content-start align-items-center text-center mt-5"
+        className="d-flex flex-column justify-content-start align-items-center text-center"
         style={{ height: '90vh' }}
       >
-        <div className="mb-4">
-          <h1 className="fw-bold">Hello, I'm Carlos 👋</h1>
-          <h4 className="text-muted">Full-Stack Developer</h4>
-          <p className="mt-3">
-            I build modern, scalable web applications with clean, efficient code. Let's bring ideas to life together.
-          </p>
-          <div className="d-flex justify-content-center gap-3 mt-4">
-            <Button variant="primary" href="/projects">View Projects</Button>
-            <a href={resumeFile} download className="btn btn-outline-secondary">
-              Download Resume
-            </a>
-          </div>
-        </div>
 
-        {/* Large Profile Picture filling vertical space */}
-        <div className="d-flex flex-grow-1 align-items-center justify-content-center w-100">
+        {/* Large Profile Picture at the Top */}
+        <div className="d-flex mt-5 mb-5 align-items-center justify-content-center w-100">
           <Image
             src={profilePic}
             alt="Profile"
@@ -35,6 +22,21 @@ function Home() {
             className="shadow"
             style={{ maxHeight: '300px', objectFit: 'cover' }}
           />
+        </div>
+
+        {/* Hero Content Below Picture */}
+        <div className="mb-4 mt-4">
+          <h1 className="fw-bold mb-3">Hello, I'm Carlos 👋</h1>
+          <h4 className="text-muted">Full-Stack Developer</h4>
+          <p className="mt-4">
+            I build modern, scalable web applications with clean, efficient code. Let's bring ideas to life together.
+          </p>
+          <div className="d-flex justify-content-center gap-3 mt-4">
+            <Button variant="primary" href="/projects">View Projects</Button>
+            <a href={resumeFile} download className="btn btn-outline-secondary">
+              Download Resume
+            </a>
+          </div>
         </div>
 
         {/* Scroll down arrow */}
@@ -49,9 +51,8 @@ function Home() {
       <Container fluid id="skills-section" className="pt-5 pb-5" style={{ backgroundColor: '#f8f9fa' }}>
         <Container>
           <Row className="align-items-center">
-            {/* Optional: Placeholder for tech icon image */}
+            {/* Placeholder image for tech stack icons */}
             <Col md={4} className="text-center mb-4 mb-md-0">
-              {/* Replace with your actual tech image when ready */}
               <Image
                 src="https://via.placeholder.com/300x200?text=Tech+Icons"
                 alt="Tech Stack Icons"
@@ -60,7 +61,7 @@ function Home() {
               />
             </Col>
 
-            {/* Right: Tech Skills */}
+            {/* Tech Skills Content */}
             <Col md={8} className="d-flex flex-column justify-content-center">
               <h2 className="mb-4">Tech Skills</h2>
               <ul className="list-unstyled">
