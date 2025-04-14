@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact';
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/`)
-      .then(res => setMessage(res.data))
-      .catch(err => console.error(err));
-  }, []);
-
   return (
-    <div className="App">
-      <h1>{message || "Loading..."}</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
