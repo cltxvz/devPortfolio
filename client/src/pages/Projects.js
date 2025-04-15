@@ -1,6 +1,7 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import resumeFile from '../components/Files/resume.pdf';
 import placeholder from '../components/Files/ucf.jpg';
+import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
 
 function Projects() {
   const completedProjects = [
@@ -27,26 +28,30 @@ function Projects() {
       {/* Completed Projects */}
       {completedProjects.map((project, idx) => (
         <div key={idx}>
-          <Row className="mb-4 align-items-center">
-            <Col md={5} className="text-center mb-3 mb-md-0">
-              <Image
-                src={placeholder}
-                alt={`${project.title} Screenshot`}
-                fluid
-                className="shadow"
-              />
-            </Col>
-            <Col md={7}>
-              <h3>{project.title}</h3>
-              <p><em>Description coming soon...</em></p>
-              <p><strong>Tech Stack:</strong> TBD</p>
-              {project.live ? (
-                <Button variant="primary" href="#" target="_blank">Live Demo</Button>
-              ) : (
-                <p className="text-muted">Demo not available</p>
-              )}
-            </Col>
-          </Row>
+          {project.title === 'TripPlanner' ? (
+            <TripPlanner />
+          ) : (
+            <Row className="mb-4 align-items-center">
+              <Col md={5} className="text-center mb-3 mb-md-0">
+                <Image
+                  src={placeholder}
+                  alt={`${project.title} Screenshot`}
+                  fluid
+                  className="shadow"
+                />
+              </Col>
+              <Col md={7}>
+                <h3>{project.title}</h3>
+                <p><em>Description coming soon...</em></p>
+                <p><strong>Tech Stack:</strong> TBD</p>
+                {project.live ? (
+                  <Button variant="primary" href="#" target="_blank">Live Demo</Button>
+                ) : (
+                  <p className="text-muted">Demo not available</p>
+                )}
+              </Col>
+            </Row>
+          )}
           {/* Divider */}
           {idx !== completedProjects.length - 1 && <hr className="mb-5" />}
         </div>
