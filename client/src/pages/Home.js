@@ -1,19 +1,25 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import profilePic from '../components/Files/profile.jpg';
 import resumeFile from '../components/Files/resume.pdf';
+import techPic from '../components/Files/technologies.jpg';
 
 function Home() {
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: 'white',
+        minHeight: '100vh',
+        width: '100%',
+      }}
+    >
       {/* Hero Section */}
       <Container
         fluid
         className="d-flex flex-column justify-content-start align-items-center text-center"
         style={{ height: '90vh' }}
       >
-
-        {/* Large Profile Picture at the Top */}
-        <div className="d-flex mt-5 mb-5 align-items-center justify-content-center w-100">
+        {/* Profile Picture */}
+        <div className="d-flex flex-grow-1 align-items-center justify-content-center w-100">
           <Image
             src={profilePic}
             alt="Profile"
@@ -24,12 +30,12 @@ function Home() {
           />
         </div>
 
-        {/* Hero Content Below Picture */}
-        <div className="mb-4 mt-4">
+        {/* Hero Text */}
+        <div className="mt-1 mb-4">
           <h1 className="fw-bold mb-3">Hello, I'm Carlos 👋</h1>
-          <h4 className="text-muted">Full-Stack Developer</h4>
-          <p className="mt-4">
-            I build modern, scalable web applications with clean, efficient code. Let's bring ideas to life together.
+          <h4 className="text-muted">Software Engineer</h4>
+          <p className="mt-3 mb-2">
+            I build modern web apps with clean code, scalable architecture, and a passion for problem-solving!
           </p>
           <div className="d-flex justify-content-center gap-3 mt-4">
             <Button variant="primary" href="/projects">View Projects</Button>
@@ -39,7 +45,7 @@ function Home() {
           </div>
         </div>
 
-        {/* Scroll down arrow */}
+        {/* Scroll Arrow */}
         <div className="mt-auto pb-4">
           <a href="#skills-section" className="text-dark fs-3">
             <i className="bi bi-chevron-double-down"></i>
@@ -47,50 +53,55 @@ function Home() {
         </div>
       </Container>
 
-      {/* About & Tech Skills Section */}
-      <Container fluid id="skills-section" className="pt-5 pb-5" style={{ backgroundColor: '#f8f9fa' }}>
+      {/* Tech Skills Section */}
+      <Container fluid id="skills-section" className="pt-5 pb-5">
         <Container>
           <Row className="align-items-center">
-            {/* Placeholder image for tech stack icons */}
             <Col md={4} className="text-center mb-4 mb-md-0">
               <Image
-                src="https://via.placeholder.com/300x200?text=Tech+Icons"
+                src={techPic}
                 alt="Tech Stack Icons"
                 fluid
                 className="shadow"
+                style={{ maxHeight: '350px', objectFit: 'cover' }}
               />
             </Col>
 
-            {/* Tech Skills Content */}
             <Col md={8} className="d-flex flex-column justify-content-center">
-              <h2 className="mb-4">Tech Skills</h2>
-              <ul className="list-unstyled">
-                <li className="mb-3">
-                  <strong>Languages:</strong> Python, Java, TypeScript, JavaScript, C#, C, SQL, HTML/CSS
-                </li>
-                <li className="mb-3">
-                  <strong>Developer Tools:</strong> Amazon Web Services, Git, GitHub, GitHub Actions, Node.js, Slurm, NoSQL, Expo, Jira, Batch, Bash
-                </li>
-                <li className="mb-3">
-                  <strong>Frameworks:</strong> React Native, .NET, Flask, Bootstrap
-                </li>
-                <li className="mb-3">
-                  <strong>Libraries:</strong> PyTorch, NumPy, Matplotlib, Scikit-learn, Pandas, TensorFlow, Windows Forms
-                </li>
-                <li className="mb-4">
-                  <strong>IDEs:</strong> VS Code, Visual Studio, Jupyter Notebook, Google Colab, IntelliJ
-                </li>
-              </ul>
+            <h2 className="mb-4">Tech Skills</h2>
+            <ul className="list-unstyled">
+              <li className="mb-3">
+                <strong>Languages:</strong> Python, JavaScript, TypeScript, Java, C, SQL, HTML/CSS.
+              </li>
+              <li className="mb-3">
+                <strong>Frameworks & Libraries:</strong> React.js, React Native, Express.js, Flask, Bootstrap 5, Mongoose, Socket.io, React Router, Axios, BeautifulSoup, Pillow, Nodemailer.
+              </li>
+              <li className="mb-3">
+                <strong>Developer Tools:</strong> Git, GitHub, Node.js, MongoDB Atlas, Putty, Postman, LocalStorage, Jira, Android Studio, REST APIs.
+              </li>
+              <li className="mb-3">
+                <strong>Cloud & Services:</strong> Amazon Web Services (EC2, S3, RDS), Microsoft Azure, DigitalOcean, Heroku, MongoDB TTL Indexes.
+              </li>
+              <li className="mb-3">
+                <strong>Authentication & Security:</strong> JWT, Bcrypt, Secure REST APIs, Environment Variables.
+              </li>
+              <li className="mb-4">
+                <strong>IDEs & Platforms:</strong> VS Code, Visual Studio, PyCharm, IntelliJ, Code::Blocks.
+              </li>
+              <li className="mb-4">
+                <strong>Operating Systems:</strong> Windows, macOS, Linux.
+              </li>
+            </ul>
 
-              {/* CTA Button to About */}
+
               <div>
-                <Button variant="secondary" href="/about">Learn more about me!</Button>
+                <Button variant="primary" href="/about">Learn more about me!</Button>
               </div>
             </Col>
           </Row>
         </Container>
       </Container>
-    </>
+    </div>
   );
 }
 
