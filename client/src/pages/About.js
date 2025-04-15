@@ -1,8 +1,8 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import aboutPic from '../components/Files/about.jpg';
-import ucfLogo from '../components/Files/ucf.jpg';
-import mdcLogo from '../components/Files/mdc.jpg';
-import touchlessLogo from '../components/Files/touchless.jpg';
+import aboutPic from '../components/About/about.jpg';
+import ucfLogo from '../components/About/ucf.jpg';
+import mdcLogo from '../components/About/mdc.jpg';
+import touchlessLogo from '../components/About/touchless.jpg';
 import resumeFile from '../components/Files/resume.pdf';
 
 function About() {

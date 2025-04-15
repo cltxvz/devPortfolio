@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import resumeFile from '../components/Files/resume.pdf';
-import placeholder from '../components/Files/ucf.jpg';
+import placeholder from '../components/About/ucf.jpg';
 import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
 
 function Projects() {

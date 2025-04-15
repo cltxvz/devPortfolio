@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
-import profilePic from '../components/Files/profile.jpg';
+import profilePic from '../components/Home/profile.jpg';
 import resumeFile from '../components/Files/resume.pdf';
-import techPic from '../components/Files/technologies.jpg';
+import techPic from '../components/Home/technologies.jpg';
 
 function Home() {
   return (
