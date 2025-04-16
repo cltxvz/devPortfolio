@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Row, Col, Carousel, Button, Modal } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
+import CarouselWithModal from '../CarouselWithModal';
 import trip1 from './screen1.png';
 import trip2 from './screen2.png';
 import trip3 from './screen3.png';
@@ -9,99 +9,48 @@ import trip6 from './screen6.png';
 import trip7 from './screen7.png';
 
 function TripPlanner() {
-  const [showModal, setShowModal] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const imageStyle = {
-    height: '300px',
-    objectFit: 'cover',
-    cursor: 'pointer',
-  };
-
   const tripImages = [trip1, trip2, trip3, trip4, trip5, trip6, trip7];
 
-  const handleImageClick = (idx) => {
-    setActiveIndex(idx);
-    setShowModal(true);
-  };
-
   return (
-    <>
-      <Row className="mb-5 align-items-center">
-        {/* Screenshot Carousel */}
-        <Col md={5} className="text-center mb-3 mb-md-0">
-          <Carousel fade className="shadow rounded carousel-dark" style={{ height: '300px' }}>
-            {tripImages.map((img, idx) => (
-              <Carousel.Item key={idx}>
-                <img
-                  src={img}
-                  alt={`TripPlanner Screenshot ${idx + 1}`}
-                  className="d-block w-100"
-                  style={imageStyle}
-                  onClick={() => handleImageClick(idx)}
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Col>
+    <Row className="mb-5 align-items-center">
+      {/* Screenshot Carousel */}
+      <Col md={5} className="text-center mb-3 mb-md-0">
+        <CarouselWithModal images={tripImages} />
+      </Col>
 
-        {/* Project Info */}
-        <Col md={7}>
-          <h3 className="text-decoration-underline">TripPlanner</h3>
-          <p>
-            <strong>TripPlanner</strong> is an interactive trip planning app that helps users organize
-            destinations, manage activities, and track expenses — all in one place. With a
-            drag-and-drop itinerary builder, real-time budget tracking, and JSON import/export
-            functionality, users can create and share fully customized travel plans effortlessly.
-          </p>
+      {/* Project Info */}
+      <Col md={7}>
+        <h3 className="text-decoration-underline">TripPlanner</h3>
+        <p>
+          <strong>TripPlanner</strong> is an interactive trip planning app that helps users organize
+          destinations, manage activities, and track expenses — all in one place. With a
+          drag-and-drop itinerary builder, real-time budget tracking, and JSON import/export
+          functionality, users can create and share fully customized travel plans effortlessly.
+        </p>
 
-          <p><strong>Tech Stack:</strong> React, Bootstrap 5, React Router, CSS, LocalStorage, Git & GitHub.</p>
+        <p><strong>Tech Stack:</strong> React, Bootstrap 5, React Router, CSS, LocalStorage, Git & GitHub.</p>
 
-          <p>
-            <strong>My Contributions:</strong>
-            <ul>
-              <li>Designed and built the entire frontend using React and Bootstrap 5.</li>
-              <li>Implemented drag-and-drop scheduling and daily itinerary calendar view.</li>
-              <li>Handled local state management and data persistence with LocalStorage.</li>
-              <li>Created modular, reusable components and implemented event handling across features.</li>
-              <li>Planned architecture to support future backend integration.</li>
-            </ul>
-          </p>
+        <p>
+          <strong>My Contributions:</strong>
+          <ul>
+            <li>Designed and built the entire frontend using React and Bootstrap 5.</li>
+            <li>Implemented drag-and-drop scheduling and daily itinerary calendar view.</li>
+            <li>Handled local state management and data persistence with LocalStorage.</li>
+            <li>Created modular, reusable components and implemented event handling across features.</li>
+            <li>Planned architecture to support future backend integration.</li>
+          </ul>
+        </p>
 
-          <Button
-            variant="primary"
-            href="https://tripplanner-frontend-f9551d40cec7.herokuapp.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo
-          </Button>
-        </Col>
-      </Row>
-
-      {/* Modal Carousel */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} centered size="lg">
-        <Modal.Body className="p-0">
-          <Carousel
-            fade
-            activeIndex={activeIndex}
-            onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
-            className="carousel-dark"
-          >
-            {tripImages.map((img, idx) => (
-              <Carousel.Item key={idx}>
-                <img
-                  src={img}
-                  alt={`TripPlanner Modal Screenshot ${idx + 1}`}
-                  className="d-block w-100"
-                  style={{ width: '100%', maxHeight: '90vh', objectFit: 'contain' }}
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Modal.Body>
-      </Modal>
-    </>
+        <Button
+          variant="primary"
+          href="https://tripplanner-frontend-f9551d40cec7.herokuapp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live Demo
+        </Button>
+      </Col>
+    </Row>
   );
 }
 
