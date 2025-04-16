@@ -5,6 +5,7 @@ import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
 import DreamBuy from '../components/Projects/DreamBuy/DreamBuy';
 import SnapQuiz from '../components/Projects/SnapQuiz/SnapQuiz';
 import JobTracker from '../components/Projects/JobTracker/JobTracker';
+import PayMates from '../components/Projects/PayMates/PayMates';
 
 function Projects() {
   const completedProjects = [
@@ -39,6 +40,8 @@ function Projects() {
             <SnapQuiz />
           ) : project.title === 'JobTracker' ? (
             <JobTracker />
+          ) : project.title === 'PayMates' ? (
+            <PayMates />
           ) : (
             <Row className="mb-4 align-items-center">
               <Col md={5} className="text-center mb-3 mb-md-0">
