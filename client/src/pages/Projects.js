@@ -4,6 +4,7 @@ import placeholder from '../components/About/ucf.jpg';
 import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
 import DreamBuy from '../components/Projects/DreamBuy/DreamBuy';
 import SnapQuiz from '../components/Projects/SnapQuiz/SnapQuiz';
+import JobTracker from '../components/Projects/JobTracker/JobTracker';
 
 function Projects() {
   const completedProjects = [
@@ -36,6 +37,8 @@ function Projects() {
             <DreamBuy />
           ) : project.title === 'SnapQuiz' ? (
             <SnapQuiz />
+          ) : project.title === 'JobTracker' ? (
+            <JobTracker />
           ) : (
             <Row className="mb-4 align-items-center">
               <Col md={5} className="text-center mb-3 mb-md-0">
