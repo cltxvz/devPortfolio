@@ -3,6 +3,7 @@ import resumeFile from '../components/Files/resume.pdf';
 import placeholder from '../components/About/ucf.jpg';
 import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
 import DreamBuy from '../components/Projects/DreamBuy/DreamBuy';
+import SnapQuiz from '../components/Projects/SnapQuiz/SnapQuiz';
 
 function Projects() {
   const completedProjects = [
@@ -33,6 +34,8 @@ function Projects() {
             <TripPlanner />
           ) : project.title === 'DreamBuy' ? (
             <DreamBuy />
+          ) : project.title === 'SnapQuiz' ? (
+            <SnapQuiz />
           ) : (
             <Row className="mb-4 align-items-center">
               <Col md={5} className="text-center mb-3 mb-md-0">
