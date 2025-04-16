@@ -2,6 +2,7 @@ import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import resumeFile from '../components/Files/resume.pdf';
 import placeholder from '../components/About/ucf.jpg';
 import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
+import DreamBuy from '../components/Projects/DreamBuy/DreamBuy';
 
 function Projects() {
   const completedProjects = [
@@ -30,6 +31,8 @@ function Projects() {
         <div key={idx}>
           {project.title === 'TripPlanner' ? (
             <TripPlanner />
+          ) : project.title === 'DreamBuy' ? (
+            <DreamBuy />
           ) : (
             <Row className="mb-4 align-items-center">
               <Col md={5} className="text-center mb-3 mb-md-0">
