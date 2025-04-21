@@ -1,12 +1,14 @@
-import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import resumeFile from '../components/Files/resume.pdf';
-import placeholder from '../components/About/ucf.jpg';
+
+// Project Components
 import TripPlanner from '../components/Projects/TripPlanner/TripPlanner';
 import DreamBuy from '../components/Projects/DreamBuy/DreamBuy';
 import SnapQuiz from '../components/Projects/SnapQuiz/SnapQuiz';
 import JobTracker from '../components/Projects/JobTracker/JobTracker';
 import PayMates from '../components/Projects/PayMates/PayMates';
 import MiSuApp from '../components/Projects/MiSuApp/MiSuApp';
+import TBCTrackingSystem from '../components/Projects/TBCTrackingSystem/TBCTrackingSystem';
 
 function Projects() {
   const completedProjects = [
@@ -16,13 +18,6 @@ function Projects() {
     { title: 'JobTracker', live: true },
     { title: 'PayMates', live: true },
     { title: 'MiSuApp', live: false },
-    { title: 'TBC Dealers Portal', live: false },
-    { title: 'GymBroseph', live: false, placeholder: true },
-    { title: 'Contact Manager', live: false, placeholder: true },
-  ];
-
-  const ongoingProjects = [
-    { title: 'TBC Tracking System', live: false },
   ];
 
   return (
@@ -33,40 +28,12 @@ function Projects() {
       {/* Completed Projects */}
       {completedProjects.map((project, idx) => (
         <div key={idx}>
-          {project.title === 'TripPlanner' ? (
-            <TripPlanner />
-          ) : project.title === 'DreamBuy' ? (
-            <DreamBuy />
-          ) : project.title === 'SnapQuiz' ? (
-            <SnapQuiz />
-          ) : project.title === 'JobTracker' ? (
-            <JobTracker />
-          ) : project.title === 'PayMates' ? (
-            <PayMates />
-          ) : project.title === 'MiSuApp' ? (
-            <MiSuApp />
-          ) : (
-            <Row className="mb-4 align-items-center">
-              <Col md={5} className="text-center mb-3 mb-md-0">
-                <Image
-                  src={placeholder}
-                  alt={`${project.title} Screenshot`}
-                  fluid
-                  className="shadow"
-                />
-              </Col>
-              <Col md={7}>
-                <h3>{project.title}</h3>
-                <p><em>Description coming soon...</em></p>
-                <p><strong>Tech Stack:</strong> TBD</p>
-                {project.live ? (
-                  <Button variant="primary" href="#" target="_blank">Live Demo</Button>
-                ) : (
-                  <p className="text-muted">Demo not available</p>
-                )}
-              </Col>
-            </Row>
-          )}
+          {project.title === 'TripPlanner' && <TripPlanner />}
+          {project.title === 'DreamBuy' && <DreamBuy />}
+          {project.title === 'SnapQuiz' && <SnapQuiz />}
+          {project.title === 'JobTracker' && <JobTracker />}
+          {project.title === 'PayMates' && <PayMates />}
+          {project.title === 'MiSuApp' && <MiSuApp />}
           {/* Divider */}
           {idx !== completedProjects.length - 1 && <hr className="mb-5" />}
         </div>
@@ -77,25 +44,8 @@ function Projects() {
         <h1 className="text-center mb-4 text-decoration-underline">Ongoing Projects</h1>
       </div>
 
-      {/* Ongoing Projects List */}
-      {ongoingProjects.map((project, idx) => (
-        <Row key={idx} className="mb-5 align-items-center">
-          <Col md={5} className="text-center mb-3 mb-md-0">
-            <Image
-              src={placeholder}
-              alt={`${project.title} Screenshot`}
-              fluid
-              className="shadow"
-            />
-          </Col>
-          <Col md={7}>
-            <h3>{project.title}</h3>
-            <p><em>Currently in development. Details coming soon.</em></p>
-            <p><strong>Tech Stack:</strong> TBD</p>
-            <p className="text-muted">Demo not available</p>
-          </Col>
-        </Row>
-      ))}
+      {/* Ongoing Project Component */}
+      <TBCTrackingSystem />
 
       {/* Call-to-Action Buttons */}
       <Row className="mt-5 justify-content-center">
