@@ -6,6 +6,7 @@ import DreamBuy from '../components/Projects/DreamBuy/DreamBuy';
 import SnapQuiz from '../components/Projects/SnapQuiz/SnapQuiz';
 import JobTracker from '../components/Projects/JobTracker/JobTracker';
 import PayMates from '../components/Projects/PayMates/PayMates';
+import MiSuApp from '../components/Projects/MiSuApp/MiSuApp';
 
 function Projects() {
   const completedProjects = [
@@ -14,7 +15,7 @@ function Projects() {
     { title: 'SnapQuiz', live: true },
     { title: 'JobTracker', live: true },
     { title: 'PayMates', live: true },
-    { title: 'MiSu App', live: false },
+    { title: 'MiSuApp', live: false },
     { title: 'TBC Dealers Portal', live: false },
     { title: 'GymBroseph', live: false, placeholder: true },
     { title: 'Contact Manager', live: false, placeholder: true },
@@ -42,6 +43,8 @@ function Projects() {
             <JobTracker />
           ) : project.title === 'PayMates' ? (
             <PayMates />
+          ) : project.title === 'MiSuApp' ? (
+            <MiSuApp />
           ) : (
             <Row className="mb-4 align-items-center">
               <Col md={5} className="text-center mb-3 mb-md-0">
