@@ -27,7 +27,7 @@ function About() {
         <Col>
           <h2 className="mb-3">About Me:</h2>
           <p>
-            I'm a dedicated and curious software engineer with a passion for learning, problem-solving, and building real-world solutions through clean, scalable code. Whether it's through team collaboration or independent work, I strive to grow with each project and contribute meaningfully to the development community.
+            I'm a curious and driven software engineer who loves building things that actually make a difference. Whether it's developing full-stack apps or setting up backend systems from scratch, I enjoy solving problems and turning ideas into real, functional solutions. I’m always looking to learn, grow, and push my limits — and whether I’m working solo or collaborating with a team, I aim to write clean, scalable code that I'm proud of.
           </p>
         </Col>
       </Row>
@@ -87,13 +87,13 @@ function About() {
               />
             </Col>
             <Col>
-              <h5 className="mb-1">Quality Control Inspector</h5>
-              <p className="mb-1 text-muted">Touchless Cover LLC | Feb 2021 – Present</p>
+              <h5 className="mb-1">Software Developer</h5>
+              <p className="mb-1 text-muted">Touchless Cover LLC | Jan 2025 – Present</p>
               <ul className="mb-0">
-                <li>Inspected products across production stages and maintained quality control databases.</li>
-                <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>
-                <li>Led monthly strategic meetings to improve product quality and team collaboration.</li>
-                <li>Handled dealer inquiries and ensured consistent adherence to quality standards.</li>
+                <li>Currently leading the development of an internal order tracking system to streamline logistics and order visibility.</li>
+                <li>Designing and implementing backend APIs, frontend interfaces, and database structures for a future dealer portal.</li>
+                <li>Collaborated with stakeholders to gather requirements and propose scalable software solutions tailored to operational needs.</li>
+                <li>Contributing to the modernization of internal operations through automation and custom tooling.</li>
               </ul>
             </Col>
           </Row>
@@ -110,7 +110,7 @@ function About() {
             </Col>
             <Col>
               <h5 className="mb-1">Quality Control Inspector</h5>
-              <p className="mb-1 text-muted">Touchless Cover LLC | Feb 2021 – Present</p>
+              <p className="mb-1 text-muted">Touchless Cover LLC | Feb 2021 – December 2024</p>
               <ul className="mb-0">
                 <li>Inspected products across production stages and maintained quality control databases.</li>
                 <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>

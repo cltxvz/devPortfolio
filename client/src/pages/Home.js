@@ -35,7 +35,7 @@ function Home() {
           <h1 className="fw-bold mb-3">Hello, I'm Carlos 👋</h1>
           <h4 className="text-muted">Software Engineer</h4>
           <p className="mt-3 mb-2">
-            I build modern web apps with clean code, scalable architecture, and a passion for problem-solving!
+            I build modern apps and tools with clean code, scalable architecture, and a passion for problem-solving!
           </p>
           <div className="d-flex justify-content-center gap-3 mt-4">
             <Button variant="primary" href="/projects">View Projects</Button>
