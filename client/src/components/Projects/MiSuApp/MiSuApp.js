@@ -46,7 +46,7 @@ function MiSuApp() {
             </ul>
           </p>
 
-          <p className="text-muted">* Demo not available *</p>
+          <p className="text-muted">Demo not available.</p>
 
           <Button
             variant="primary"
