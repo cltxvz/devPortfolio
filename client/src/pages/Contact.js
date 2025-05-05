@@ -1,5 +1,5 @@
-import { Container, Row, Col, Form, Button, Toast, ToastContainer } from 'react-bootstrap';
-import { useState } from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { useState, useRef } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -9,14 +9,19 @@ function Contact() {
     email: '',
     subject: '',
     message: '',
-    captcha: null,
   });
 
-  const [toast, setToast] = useState({
-    show: false,
-    message: '',
-    variant: 'success',
-  });
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const captchaRef = useRef(null);
+
+  const [status, setStatus] = useState({ message: '', type: '' });
+
+  const showStatus = (message, type = 'success') => {
+    setStatus({ message, type });
+    setTimeout(() => {
+      setStatus({ message: '', type: '' });
+    }, 3000);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -28,36 +33,25 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.captcha) {
-      setToast({
-        show: true,
-        message: 'Please verify you are human.',
-        variant: 'danger',
-      });
+    if (!captchaToken) {
+      showStatus('Please verify you are human.', 'danger');
       return;
     }
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/contact`, formData);
-      setToast({
-        show: true,
-        message: 'Message sent successfully!',
-        variant: 'success',
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/contact`, {
+        ...formData,
+        captcha: captchaToken,
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        captcha: null,
-      });
+
+      showStatus('Message sent successfully!', 'success');
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setCaptchaToken(null);
+      if (captchaRef.current) captchaRef.current.reset();
     } catch (error) {
       console.error('Error sending message:', error);
-      setToast({
-        show: true,
-        message: 'Something went wrong. Please try again later.',
-        variant: 'danger',
-      });
+      showStatus('Something went wrong. Please try again later.', 'danger');
     }
   };
 
@@ -115,12 +109,19 @@ function Contact() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-4 d-flex justify-content-center">
+            <Form.Group className="mb-2 d-flex justify-content-center">
               <ReCAPTCHA
+                ref={captchaRef}
                 sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                onChange={(value) => setFormData({ ...formData, captcha: value })}
+                onChange={setCaptchaToken}
               />
             </Form.Group>
+
+            {status.message && (
+              <div className={`text-center mb-3 text-${status.type}`}>
+                {status.message}
+              </div>
+            )}
 
             <div className="text-center">
               <Button variant="primary" type="submit">Send Message</Button>
@@ -128,19 +129,6 @@ function Contact() {
           </Form>
         </Col>
       </Row>
-
-      {/* Toast Notifications */}
-      <ToastContainer position="bottom-center" className="mb-4">
-        <Toast
-          onClose={() => setToast({ ...toast, show: false })}
-          show={toast.show}
-          bg={toast.variant}
-          delay={4000}
-          autohide
-        >
-          <Toast.Body className="text-white">{toast.message}</Toast.Body>
-        </Toast>
-      </ToastContainer>
     </Container>
   );
 }
