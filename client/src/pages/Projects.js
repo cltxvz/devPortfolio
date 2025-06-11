@@ -14,7 +14,7 @@ function Projects() {
   return (
     <div style={{ backgroundColor: 'rgb(245, 251, 252)', minHeight: '100vh', width: '100%' }}>
       {/* Section 1: Top to DreamBuy */}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '5rem', paddingBottom: '0' }}>
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '3rem', paddingBottom: '0' }}>
         <Container>
           <h1 className="mb-5 text-center text-decoration-underline">Portfolio Projects</h1>
           <DreamBuy />

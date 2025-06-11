@@ -9,7 +9,7 @@ function About() {
   return (
     <div style={{ backgroundColor: 'rgb(245, 251, 252)', minHeight: '100vh', width: '100%' }}>
       {/* Section 1: About Me */}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '5rem', paddingBottom: '0' }}>
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '3rem', paddingBottom: '0' }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col md={4} className="text-center">
@@ -17,9 +17,8 @@ function About() {
                 src={aboutPic}
                 alt="Carlos Cardenas"
                 rounded
-                fluid
                 className="shadow"
-                style={{ maxHeight: '300px', objectFit: 'cover' }}
+                style={{ maxHeight: '320px', objectFit: 'cover' }}
               />
             </Col>
           </Row>
@@ -77,7 +76,7 @@ function About() {
       </div>
 
       {/* Section 3: Work Experience*/}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '5rem' }}>
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '2rem' }}>
         <Container>
           <Row>
             <Col>
@@ -124,6 +123,39 @@ function About() {
                   </ul>
                 </Col>
               </Row>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* Section 4: Tech Skills */}
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '5rem' }}>
+        <Container>
+          <Row>
+            <Col>
+              <h2 className="mb-4">Tech Skills</h2>
+              <ul className="list-unstyled">
+                <li className="mb-3">
+                  <strong>Languages:</strong> Python, JavaScript, TypeScript, Java, C, SQL, HTML/CSS.
+                </li>
+                <li className="mb-3">
+                  <strong>Frameworks & Libraries:</strong> React.js, React Native, Express.js, Flask, Bootstrap 5, Mongoose, Socket.io, React Router, Axios, BeautifulSoup, Pillow, Nodemailer.
+                </li>
+                <li className="mb-3">
+                  <strong>Developer Tools:</strong> Git, GitHub, Node.js, MongoDB Atlas, Putty, Postman, LocalStorage, Jira, Android Studio, REST APIs.
+                </li>
+                <li className="mb-3">
+                  <strong>Cloud & Services:</strong> Amazon Web Services, Microsoft Azure, DigitalOcean, Heroku, MongoDB TTL Indexes.
+                </li>
+                <li className="mb-3">
+                  <strong>Authentication & Security:</strong> JWT, Secure REST APIs, Environment Variables.
+                </li>
+                <li className="mb-3">
+                  <strong>IDEs & Platforms:</strong> VS Code, Visual Studio, PyCharm, IntelliJ, Code::Blocks.
+                </li>
+                <li className="mb-3">
+                  <strong>Operating Systems:</strong> Windows, macOS, Linux.
+                </li>
+              </ul>
             </Col>
           </Row>
 
