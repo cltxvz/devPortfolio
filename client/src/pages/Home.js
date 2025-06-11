@@ -16,7 +16,7 @@ function Home() {
       <Container
         fluid
         className="d-flex flex-column justify-content-start align-items-center text-center"
-        style={{ height: '90vh', background: 'linear-gradient(to bottom, rgba(2, 136, 169, 0.28) ,rgb(245, 251, 252))' }}
+        style={{ height: '90vh', background: 'linear-gradient(to bottom, rgb(245, 251, 252) ,rgb(245, 251, 252))' }}
       >
         {/* Profile Picture */}
         <div className="d-flex flex-grow-1 align-items-center justify-content-center w-100">
@@ -39,7 +39,7 @@ function Home() {
           </p>
           <div className="d-flex justify-content-center gap-3 mt-4 mb-5">
             <Button variant="primary" href="/projects">View Projects</Button>
-            <a href={resumeFile} download className="btn btn-outline-secondary">
+            <a href={resumeFile} download="Carlos A. Cárdenas - Resume.pdf" className="btn btn-outline-secondary">
               Download Resume
             </a>
           </div>
@@ -54,7 +54,7 @@ function Home() {
       </Container>
 
       {/* Tech Skills Section */}
-      <Container fluid id="skills-section" className="pt-5 pb-5" style={{background: 'linear-gradient(to bottom,rgb(245, 251, 252),rgba(2, 136, 169, 0.28)'  }}>
+      <Container fluid id="skills-section" className="pt-5 pb-5" style={{background: 'linear-gradient(to bottom,rgb(245, 251, 252),rgb(245, 251, 252)'  }}>
         <Container>
           <Row className="align-items-center">
             <Col md={4} className="text-center mb-4 mb-md-0">

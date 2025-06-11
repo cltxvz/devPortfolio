@@ -7,11 +7,10 @@ import resumeFile from '../components/Files/resume.pdf';
 
 function About() {
   return (
-    <div style={{ backgroundColor: 'white', minHeight: '100vh', width: '100%' }}>
-      {/* Section 1: Top → About Me */}
-      <div style={{ background: 'linear-gradient(to bottom, rgba(2, 136, 169, 0.28), rgb(245, 251, 252))' }}>
-        <Container className="py-5">
-          {/* About Picture */}
+    <div style={{ backgroundColor: 'rgb(245, 251, 252)', minHeight: '100vh', width: '100%' }}>
+      {/* Section 1: About Me */}
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '5rem', paddingBottom: '0' }}>
+        <Container>
           <Row className="justify-content-center mb-5">
             <Col md={4} className="text-center">
               <Image
@@ -25,8 +24,7 @@ function About() {
             </Col>
           </Row>
 
-          {/* About Me */}
-          <Row className="mb-5">
+          <Row className="mb-3">
             <Col>
               <h2 className="mb-3">About Me:</h2>
               <p>
@@ -38,9 +36,8 @@ function About() {
       </div>
 
       {/* Section 2: Education */}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252)' }}>
-        <Container className="py-5">
-          {/* Education */}
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '0' }}>
+        <Container>
           <Row className="mb-5">
             <Col>
               <h2 className="mb-4">Education:</h2>
@@ -79,10 +76,9 @@ function About() {
         </Container>
       </div>
 
-      {/* Section 3: Work Experience → Bottom */}
-      <div style={{ background: 'linear-gradient(to bottom,rgb(245, 251, 252), rgba(2, 136, 169, 0.28))' }}>
-        <Container className="py-5">
-          {/* Work Experience */}
+      {/* Section 3: Work Experience*/}
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '5rem' }}>
+        <Container>
           <Row>
             <Col>
               <h2 className="mb-4">Work Experience:</h2>
@@ -97,8 +93,8 @@ function About() {
                   />
                 </Col>
                 <Col>
-                  <h5 className="mb-1">Software Developer</h5>
-                  <p className="mb-1 text-muted">Touchless Cover LLC | Jan 2025 – Present</p>
+                  <h5 className="mb-1">Software Engineer</h5>
+                  <p className="mb-1 text-muted">Touchless Cover LLC | March 2025 – Present</p>
                   <ul className="mb-0">
                     <li>Currently leading the development of an internal order tracking system to streamline logistics and order visibility.</li>
                     <li>Designing and implementing backend APIs, frontend interfaces, and database structures for a future dealer portal.</li>
@@ -119,7 +115,7 @@ function About() {
                 </Col>
                 <Col>
                   <h5 className="mb-1">Quality Control Inspector</h5>
-                  <p className="mb-1 text-muted">Touchless Cover LLC | Feb 2021 – December 2024</p>
+                  <p className="mb-1 text-muted">Touchless Cover LLC | February 2021 – March 2025</p>
                   <ul className="mb-0">
                     <li>Inspected products across production stages and maintained quality control databases.</li>
                     <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>
@@ -136,7 +132,7 @@ function About() {
             <Col md="auto">
               <div className="d-flex justify-content-center gap-3">
                 <a href="/projects" className="btn btn-primary">View Projects</a>
-                <a href={resumeFile} download className="btn btn-outline-secondary">Download Resume</a>
+                <a href={resumeFile} download="Carlos A. Cárdenas - Resume.pdf" className="btn btn-outline-secondary">Download Resume</a>
               </div>
             </Col>
           </Row>
