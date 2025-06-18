@@ -9,26 +9,41 @@ function About() {
   return (
     <div style={{ backgroundColor: 'rgb(245, 251, 252)', minHeight: '100vh', width: '100%' }}>
       {/* Section 1: About Me */}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '3rem', paddingBottom: '0' }}>
+      <div
+        style={{
+          background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))',
+          paddingTop: '3rem',
+          paddingBottom: '3rem',
+        }}
+      >
         <Container>
-          <Row className="justify-content-center mb-5">
-            <Col md={4} className="text-center">
+          <Row className="align-items-center">
+            {/* Text */}
+            <Col md={6} className="text-md-start text-center mb-4 mb-md-0">
+              <h2 className="fw-bold mb-3">Hello! I'm Carlos.</h2>
+              <p className="fs-5 text-muted">
+                I’m an Orlando-based software engineer with a strong interest in building impactful applications. I gained 
+                my initial development experience through school and personal projects—several of which are showcased in
+                my portfolio. Whether collaborating with a team or working independently, I focus on writing clean, maintainable
+                code that solves real-world problems. I’m continuously learning and growing, driven by curiosity and a commitment
+                to excellence in everything I create.
+              </p>
+            </Col>
+
+            {/* Image */}
+            <Col md={6} className="text-center">
               <Image
                 src={aboutPic}
                 alt="Carlos Cardenas"
-                rounded
+                fluid
                 className="shadow"
-                style={{ maxHeight: '320px', objectFit: 'cover' }}
+                style={{
+                  maxHeight: '350px',
+                  width: 'auto',
+                  borderRadius: '1rem',
+                  objectFit: 'cover',
+                }}
               />
-            </Col>
-          </Row>
-
-          <Row className="mb-3">
-            <Col>
-              <h2 className="mb-3">About Me:</h2>
-              <p>
-                I'm a curious and driven software engineer who loves building things that actually make a difference. Whether it's developing full-stack apps or setting up backend systems from scratch, I enjoy solving problems and turning ideas into real, functional solutions. I’m always looking to learn, grow, and push my limits — and whether I’m working solo or collaborating with a team, I aim to write clean, scalable code that I'm proud of.
-              </p>
             </Col>
           </Row>
         </Container>
@@ -132,7 +147,7 @@ function About() {
         <Container>
           <Row>
             <Col>
-              <h2 className="mb-4">Tech Skills</h2>
+              <h2 className="mb-4">Tech Skills:</h2>
               <ul className="list-unstyled">
                 <li className="mb-3">
                   <strong>Languages:</strong> Python, JavaScript, TypeScript, Java, C, SQL, HTML/CSS.
@@ -164,7 +179,7 @@ function About() {
             <Col md="auto">
               <div className="d-flex justify-content-center gap-3">
                 <a href="/projects" className="btn btn-primary">View Projects</a>
-                <a href={resumeFile} download="Carlos A. Cárdenas - Resume.pdf" className="btn btn-outline-secondary">Download Resume</a>
+                <a href={resumeFile} download="Carlos A. Cardenas - Resume.pdf" className="btn btn-outline-secondary">Download Resume</a>
               </div>
             </Col>
           </Row>

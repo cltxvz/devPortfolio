@@ -51,7 +51,7 @@ function Projects() {
             <Col md="auto">
               <div className="d-flex justify-content-center gap-3">
                 <a href="/contact" className="btn btn-primary">Contact Me</a>
-                <a href={resumeFile} download className="btn btn-outline-secondary">Download Resume</a>
+                <a href={resumeFile} download="Carlos A. Cardenas - Resume.pdf" className="btn btn-outline-secondary">Download Resume</a>
               </div>
             </Col>
           </Row>

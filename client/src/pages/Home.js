@@ -4,7 +4,7 @@ import resumeFile from '../components/Files/resume.pdf';
 
 function Home() {
   return (
-    <div className="d-flex flex-column flex-grow-1" style={{ backgroundColor: 'white' }}>
+    <div className="d-flex flex-column flex-grow-1" style={{ backgroundColor: 'white', minHeight: '81vh', }}>
       <Container
         fluid
         className="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center py-5"
@@ -26,7 +26,7 @@ function Home() {
 
         {/* Text Section */}
         <div style={{ maxWidth: '650px' }}>
-          <h2 className="fw-bold mb-3 display-5">Hello, I'm Carlos 👋</h2>
+          <h2 className="fw-bold mb-3 display-5">Carlos A. Cárdenas</h2>
           <h4 className="text-muted mb-4">Software Engineer</h4>
           <p className="fs-6 mb-4">
             I build modern apps and tools with clean code, scalable architecture, and a passion for problem-solving!
@@ -37,7 +37,7 @@ function Home() {
             </Button>
             <a
               href={resumeFile}
-              download="Carlos A. Cárdenas - Resume.pdf"
+              download="Carlos A. Cardenas - Resume.pdf"
               className="btn btn-outline-secondary btn-md"
             >
               Download Resume
