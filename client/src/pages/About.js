@@ -108,7 +108,7 @@ function About() {
                 </Col>
                 <Col>
                   <h5 className="mb-1">Software Engineer</h5>
-                  <p className="mb-1 text-muted">Touchless Cover LLC | March 2025 – Present</p>
+                  <p className="mb-1 text-muted">Touchless Cover LLC | May 2025 – Present</p>
                   <ul className="mb-0">
                     <li>Currently leading the development of an internal order tracking system to streamline logistics and order visibility.</li>
                     <li>Designing and implementing backend APIs, frontend interfaces, and database structures for a future dealer portal.</li>
@@ -129,7 +129,7 @@ function About() {
                 </Col>
                 <Col>
                   <h5 className="mb-1">Quality Control Inspector</h5>
-                  <p className="mb-1 text-muted">Touchless Cover LLC | February 2021 – March 2025</p>
+                  <p className="mb-1 text-muted">Touchless Cover LLC | February 2021 – May 2025</p>
                   <ul className="mb-0">
                     <li>Inspected products across production stages and maintained quality control databases.</li>
                     <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>
