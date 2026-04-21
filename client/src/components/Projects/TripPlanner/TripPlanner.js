@@ -1,4 +1,4 @@
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import CarouselWithModal from '../CarouselWithModal';
 import trip1 from './screen1.png';
 import trip2 from './screen2.png';
@@ -41,14 +41,8 @@ function TripPlanner() {
           </ul>
         </p>
 
-        <Button
-          variant="primary"
-          href="https://tripplanner-frontend-f9551d40cec7.herokuapp.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Live Demo
-        </Button>
+        {/* <p className="text-muted">Demo not available.</p> */}
+
       </Col>
     </Row>
   );

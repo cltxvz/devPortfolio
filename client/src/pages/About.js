@@ -3,6 +3,7 @@ import aboutPic from '../components/About/about.jpg';
 import ucfLogo from '../components/About/ucf.jpg';
 import mdcLogo from '../components/About/mdc.jpg';
 import touchlessLogo from '../components/About/touchless.jpg';
+import ascensusLogo from '../components/About/ascensus.jpg';
 import resumeFile from '../components/Files/resume.pdf';
 
 function About() {
@@ -49,7 +50,81 @@ function About() {
         </Container>
       </div>
 
-      {/* Section 2: Education */}
+      {/* Section 2: Work Experience*/}
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '2rem' }}>
+        <Container>
+          <Row>
+            <Col>
+              <h2 className="mb-4">Work Experience:</h2>
+
+              {/* Experience #1 - Ascensus */}
+              <Row className="align-items-start mb-4">
+                <Col xs={2} className="text-center">
+                  <Image
+                    src={ascensusLogo}
+                    alt="Ascensus Logo"
+                    fluid
+                  />
+                </Col>
+                <Col>
+                  <h5 className="mb-1">Associate Software Engineer</h5>
+                  <p className="mb-1 text-muted">Ascensus, Inc. | May 2026 – Present (Hybrid, Lake Mary, FL)</p>
+                  <ul className="mb-0">
+                    <li>Develop, test, and maintain full-stack software applications across the SDLC to deliver scalable solutions aligned with business requirements.</li>
+                    <li>Collaborate within an Agile Scrum team to design, implement, and ship features following established architectural and coding standards.</li>
+                    <li>Contribute to performance optimization, debugging, and testing efforts to ensure high-quality code delivery.</li>
+                    <li>Support CI/CD pipeline maintenance and leverage generative AI tools to enhance development velocity and deployment efficiency.</li>
+                  </ul>
+                </Col>
+              </Row>
+
+              {/* Experience #2 - Touchless Cover */}
+              <Row className="align-items-start mb-4">
+                <Col xs={2} className="text-center">
+                  <Image
+                    src={touchlessLogo}
+                    alt="Touchless Cover Logo"
+                    fluid
+                  />
+                </Col>
+                <Col>
+                  <h5 className="mb-1">Software Engineer</h5>
+                  <p className="mb-1 text-muted">Touchless Cover, LLC. | May 2025 – April 2026 (Orlando, FL)</p>
+                  <ul className="mb-0">
+                    <li>Currently leading the development of an internal order tracking system to streamline logistics and order visibility.</li>
+                    <li>Designing and implementing backend APIs, frontend interfaces, and database structures for a future dealer portal.</li>
+                    <li>Collaborated with stakeholders to gather requirements and propose scalable software solutions tailored to operational needs.</li>
+                    <li>Contributing to the modernization of internal operations through automation and custom tooling.</li>
+                  </ul>
+                </Col>
+              </Row>
+
+              {/* Experience #3 - Touchless Cover */}
+              <Row className="align-items-start mb-4">
+                <Col xs={2} className="text-center">
+                  <Image
+                    src={touchlessLogo}
+                    alt="Touchless Cover Logo"
+                    fluid
+                  />
+                </Col>
+                <Col>
+                  <h5 className="mb-1">Quality Control Inspector</h5>
+                  <p className="mb-1 text-muted">Touchless Cover, LLC. | February 2021 – May 2025 (Orlando, FL)</p>
+                  <ul className="mb-0">
+                    <li>Inspected products across production stages and maintained quality control databases.</li>
+                    <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>
+                    <li>Led monthly strategic meetings to improve product quality and team collaboration.</li>
+                    <li>Handled dealer inquiries and ensured consistent adherence to quality standards.</li>
+                  </ul>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      {/* Section 3: Education */}
       <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '0' }}>
         <Container>
           <Row className="mb-5">
@@ -90,58 +165,6 @@ function About() {
         </Container>
       </div>
 
-      {/* Section 3: Work Experience*/}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '2rem' }}>
-        <Container>
-          <Row>
-            <Col>
-              <h2 className="mb-4">Work Experience:</h2>
-
-              {/* Experience #1 */}
-              <Row className="align-items-start mb-4">
-                <Col xs={2} className="text-center">
-                  <Image
-                    src={touchlessLogo}
-                    alt="Touchless Cover Logo"
-                    fluid
-                  />
-                </Col>
-                <Col>
-                  <h5 className="mb-1">Software Engineer</h5>
-                  <p className="mb-1 text-muted">Touchless Cover LLC | May 2025 – Present</p>
-                  <ul className="mb-0">
-                    <li>Currently leading the development of an internal order tracking system to streamline logistics and order visibility.</li>
-                    <li>Designing and implementing backend APIs, frontend interfaces, and database structures for a future dealer portal.</li>
-                    <li>Collaborated with stakeholders to gather requirements and propose scalable software solutions tailored to operational needs.</li>
-                    <li>Contributing to the modernization of internal operations through automation and custom tooling.</li>
-                  </ul>
-                </Col>
-              </Row>
-
-              {/* Experience #2 */}
-              <Row className="align-items-start mb-4">
-                <Col xs={2} className="text-center">
-                  <Image
-                    src={touchlessLogo}
-                    alt="Touchless Cover Logo"
-                    fluid
-                  />
-                </Col>
-                <Col>
-                  <h5 className="mb-1">Quality Control Inspector</h5>
-                  <p className="mb-1 text-muted">Touchless Cover LLC | February 2021 – May 2025</p>
-                  <ul className="mb-0">
-                    <li>Inspected products across production stages and maintained quality control databases.</li>
-                    <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>
-                    <li>Led monthly strategic meetings to improve product quality and team collaboration.</li>
-                    <li>Handled dealer inquiries and ensured consistent adherence to quality standards.</li>
-                  </ul>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </div>
       {/* Section 4: Tech Skills */}
       <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '5rem' }}>
         <Container>

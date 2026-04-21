@@ -1,4 +1,4 @@
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import CarouselWithModal from '../CarouselWithModal';
 import pay1 from './screen1.png';
 import pay2 from './screen2.png';
@@ -42,14 +42,8 @@ function PayMates() {
           </ul>
         </p>
 
-        <Button
-          variant="primary"
-          href="https://paymates-frontend-a0fac6217401.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Live Demo
-        </Button>
+        {/* <p className="text-muted">Demo not available.</p> */}
+
       </Col>
     </Row>
   );

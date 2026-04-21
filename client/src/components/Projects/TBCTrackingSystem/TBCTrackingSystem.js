@@ -17,17 +17,27 @@ function TBCTrackingSystem() {
 
       {/* Project Info */}
       <Col md={7}>
-        <h3 className="text-decoration-underline">TBC Tracking System</h3>
+        <h3 className="text-decoration-underline">Touchless Tracking (Touchless Cover, LLC.)</h3>
         <p>
-          <strong>TBC Tracking System</strong> is an internal tool designed to monitor customer orders from placement to shipment. This system provides real-time visibility into the fulfillment pipeline and is aimed at improving transparency and logistics efficiency within the warehouse.
+          <strong>Touchless Tracking</strong> is an internal tool built for Touchless Cover, LLC, designed to track customer orders from placement to shipment. The application provides real-time visibility into the fulfillment pipeline, improving transparency and logistics efficiency within the warehouse.
         </p>
         <p>
-          The goal is to integrate this system into a broader dealer-facing dashboard, where authorized users can log in and track the status of their orders. This will be one of several tools planned for a complete Dealer Portal currently in development.
+          In addition to order-tracking functionality, several tools have been developed and integrated into the application to reduce repetitive processes, automate dealer communication, schedule orders for production, generate production reports, and consolidate multiple Excel files into a single software solution, making the entire order workflow more efficient.
         </p>
         <p>
-          <strong>My Role:</strong> I am responsible for designing and implementing the entire tracking system, including the backend architecture, database integration, and frontend interfaces for both internal use and future dealer-facing access.
+          <strong>My Contributions:</strong>
+          <ul>
+            <li>Facilitated cross-functional collaboration with stakeholders, managers, and dealers to gather requirements, align expectations, and define project goals using Agile methodologies.</li>
+            <li>Designed and implemented RESTful APIs and NoSQL database structures, alongside frontend interfaces.</li>
+            <li>Led development for both frontend and backend integrations.</li>
+            <li>Integrated JWT authentication, protected routes, and role-based access control.</li>
+            <li>Connected to cloud MongoDB with Mongoose for product & order data.</li>
+            <li>Set up Nodemailer for email-based password recovery.</li>
+          </ul>
         </p>
-        <p className="text-muted">Demo not available – project still in development.</p>
+
+        {/* <p className="text-muted">Demo not available.</p> */}
+        
       </Col>
     </Row>
   );

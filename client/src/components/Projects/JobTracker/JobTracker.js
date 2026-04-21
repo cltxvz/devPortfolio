@@ -1,4 +1,4 @@
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import CarouselWithModal from '../CarouselWithModal';
 import job1 from './screen1.png';
 import job2 from './screen2.png';
@@ -40,14 +40,8 @@ function JobTracker() {
           </ul>
         </p>
 
-        <Button
-          variant="primary"
-          href="https://jobtracker-frontend-32244539ef91.herokuapp.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Live Demo
-        </Button>
+        {/* <p className="text-muted">Demo not available.</p> */}
+
       </Col>
     </Row>
   );

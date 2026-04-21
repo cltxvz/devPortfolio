@@ -17,13 +17,16 @@ function Projects() {
       <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '3rem', paddingBottom: '0' }}>
         <Container>
           <h1 className="mb-5 text-center text-decoration-underline">Portfolio Projects</h1>
+          <hr className="mb-5" />
+          <TBCTrackingSystem />
+          <hr className="mb-5" />
           <DreamBuy />
           <hr className="mb-5" />
         </Container>
       </div>
 
       {/* Section 2: SnapQuiz to MiSuApp */}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '0' }}>
+      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '0', paddingBottom: '1rem' }}>
         <Container>
           <SnapQuiz />
           <hr className="mb-5" />
@@ -34,20 +37,10 @@ function Projects() {
           <PayMates />
           <hr className="mb-5" />
           <MiSuApp />
-        </Container>
-      </div>
-
-      {/* Section 3: Ongoing Projects to Bottom */}
-      <div style={{ background: 'linear-gradient(to bottom, rgb(245, 251, 252), rgb(245, 251, 252))', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <Container>
-          <div className="pt-3 pb-2 border-top">
-            <h1 className="text-center mb-4 text-decoration-underline">Ongoing Projects</h1>
-          </div>
-
-          <TBCTrackingSystem />
+          <hr className="mb-5" />
 
           {/* Call-to-Action Buttons */}
-          <Row className="mt-5 justify-content-center">
+          <Row className="mt-5 mb-5 justify-content-center">
             <Col md="auto">
               <div className="d-flex justify-content-center gap-3">
                 <a href="/contact" className="btn btn-primary">Contact Me</a>
