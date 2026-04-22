@@ -91,34 +91,14 @@ function About() {
                   <h5 className="mb-1">Software Engineer</h5>
                   <p className="mb-1 text-muted">Touchless Cover, LLC. | May 2025 – April 2026 (Orlando, FL)</p>
                   <ul className="mb-0">
-                    <li>Currently leading the development of an internal order tracking system to streamline logistics and order visibility.</li>
-                    <li>Designing and implementing backend APIs, frontend interfaces, and database structures for a future dealer portal.</li>
-                    <li>Collaborated with stakeholders to gather requirements and propose scalable software solutions tailored to operational needs.</li>
-                    <li>Contributing to the modernization of internal operations through automation and custom tooling.</li>
+                    <li>Led the development of an internal order tracking system to streamline logistics and order visibility, reducing manual processing time by 5+ hours per week.</li>
+                    <li>Designed and implemented RESTful APIs and NoSQL database structures, alongside frontend interfaces, for the dealer portal.</li>
+                    <li>Facilitated cross-functional collaboration with stakeholders, managers, and dealers to gather requirements, align expectations, and define project goals using Agile methodologies.</li>
+                    <li>Contributed to the modernization of internal operations through automation and custom tooling.</li>
                   </ul>
                 </Col>
               </Row>
 
-              {/* Experience #3 - Touchless Cover */}
-              <Row className="align-items-start mb-4">
-                <Col xs={2} className="text-center">
-                  <Image
-                    src={touchlessLogo}
-                    alt="Touchless Cover Logo"
-                    fluid
-                  />
-                </Col>
-                <Col>
-                  <h5 className="mb-1">Quality Control Inspector</h5>
-                  <p className="mb-1 text-muted">Touchless Cover, LLC. | February 2021 – May 2025 (Orlando, FL)</p>
-                  <ul className="mb-0">
-                    <li>Inspected products across production stages and maintained quality control databases.</li>
-                    <li>Generated Bills of Lading and defect reports while managing inventory accuracy.</li>
-                    <li>Led monthly strategic meetings to improve product quality and team collaboration.</li>
-                    <li>Handled dealer inquiries and ensured consistent adherence to quality standards.</li>
-                  </ul>
-                </Col>
-              </Row>
             </Col>
           </Row>
         </Container>
@@ -188,7 +168,7 @@ function About() {
                   <strong>Authentication & Security:</strong> JWT, Secure REST APIs, Environment Variables.
                 </li>
                 <li className="mb-3">
-                  <strong>IDEs & Platforms:</strong> VS Code, Visual Studio, PyCharm, IntelliJ, Code::Blocks.
+                  <strong>IDEs & Platforms:</strong> Cursor, Zed, VS Code, Visual Studio, PyCharm, IntelliJ, Code::Blocks.
                 </li>
                 <li className="mb-3">
                   <strong>Operating Systems:</strong> Windows, macOS, Linux.

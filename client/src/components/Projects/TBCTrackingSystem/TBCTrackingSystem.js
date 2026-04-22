@@ -32,7 +32,7 @@ function TBCTrackingSystem() {
             <li>Led development for both frontend and backend integrations.</li>
             <li>Integrated JWT authentication, protected routes, and role-based access control.</li>
             <li>Connected to cloud MongoDB with Mongoose for product & order data.</li>
-            <li>Set up Nodemailer for email-based password recovery.</li>
+            <li>Set up SendGrid API for email-based password recovery.</li>
           </ul>
         </p>
 
